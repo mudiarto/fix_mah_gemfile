@@ -64,7 +64,7 @@ module FixMahGemfile
       end
     end
     def gem_at_line gemname
-      found = gemfile.index { |line| line =~ /^\s*gem ['|"]#{gemname}/ }
+      found = gemfile.index { |line| line =~ /^\s*gem ['|"]#{gemname}['|"]/ }
       puts "found at #{found}"
       if found
         puts gemfile[found]
